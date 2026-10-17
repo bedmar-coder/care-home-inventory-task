@@ -1,18 +1,16 @@
-## Getting Started
+#How to Run It
+I chose to build this as a vanilla Java console application because it is the technology I have the most experience with. To run the app, simply compile execute the App class inside SRC
+#How the Alert Logic Works
+Instead of hardcoding a universal "low stock" definition, I designed the system to let the user set a custom minimum for each supply
+The alert logic is integrated directly into the main menu loop: at the ending of every interaction, the system checks the current stock of all items against their specific minimun and if any supply is at or below its minimum, a warning  is automatically displayed to the user
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+(Note on time: I spent a little over the suggested 2-3 hours. The weather was terrible, so I stayed in and used the extra time to build a custom CSV persistence layer from scratch. I have an upcoming exam on Java data streams, so this served as practice)
 
-## Folder Structure
+#What I Would Add With More Time
+*Graphical User Interface transitioning from a terminal app to a fully visual interface
 
-The workspace contains two folders by default, where:
+*Implementing a screen clear function between interactions so the menu doesn't continuously stack up in the terminal history
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+*Adding a menu option to set an exact stock quantity directly, rather than just adding or subtracting from the current amount
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+*Replacing my manual parsing manager with a dedicated library like OpenCSV for more scalable data handling
